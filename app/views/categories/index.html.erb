@@ -1,3 +1,5 @@
+<!--%= stylesheet_link_tag "normalize.css", "skeleton.css" %-->
+
 <div class="header">
   <div class="container">
     <h1>chip.tunes</h1>
@@ -8,7 +10,7 @@
   <div class="container">
     <div class="search">
       <%= form_tag(categories_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Games with soundtracks like..." %>
+        <%= text_field_tag :search, params[:search], placeholder: "Soundtracks similar to..." %>
         <%= submit_tag "Search" %>
       <% end %>
       <% if !@categories.present? %>
