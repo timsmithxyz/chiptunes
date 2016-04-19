@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="container">
+    <h1>chip.tunes</h1>
+  </div>
+</div>
+
+<div class="games">
+  <div class="container">
+    <%= form_tag(games_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
+      <%= submit_tag "Search" %>
+    <% end %>
+    <% if !@games.present? %>
+      <p>There are no games containing the term(s) <%= params[:search] %>.</p>  
+    <% end %>
+    <div class="cards row">
+    	<% @games.each do |t| %>
+      <div class="card col-xs-4">
+        <%= image_tag t.image %>
+        <h2><%= t.name %></h2>
+        <p><%= t.bio %></p>
+        <%= link_to "Songs from this game", game_path(t) %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
