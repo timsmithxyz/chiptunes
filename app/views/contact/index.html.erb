@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <link rel="stylesheet" href="../css/styles.css" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <%= render :partial => 'layouts/html_header' %>
+        </header>
+
+        <div class="body">
+            <section class="title">
+
+                <h1>Contact</h1>
+                <p>If you'd like to leave a message for the webmaster (a game request, perhaps?), type it out below.</p>
+
+                <form action="email.php" method="post" name="contactform">
+                    
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+
+                    <textarea name="message" placeholder="Write your message here."></textarea>
+
+                    <input type="submit" name="submit" value="Send">
+
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

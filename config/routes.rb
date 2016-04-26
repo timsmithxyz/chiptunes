@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/category/:id' => 'categories#show', as: :category
   get '/game/:id' => 'games#show', as: :game
   get '/song/:id' => 'songs#show', as: :song
+  get '/about' => 'about#index'
+  get '/contact' => 'contact#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
