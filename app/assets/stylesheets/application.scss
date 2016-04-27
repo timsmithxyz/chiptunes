@@ -1,3 +1,7 @@
 @import "materialize/components/color";
 $primary-color: color("purple", "lighten-2") !default;
 @import "materialize";
+
+.brand-logo{
+  height= 100%;
+}
