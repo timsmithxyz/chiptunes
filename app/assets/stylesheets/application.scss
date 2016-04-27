@@ -1,0 +1,5 @@
+@import "materialize/components/color";
+$primary-color: color("blueviolet", "lighten-2") !default;
+@import "materialize";
+@import "materialize/extras/nouislider";
+
