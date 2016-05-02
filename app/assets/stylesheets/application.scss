@@ -5,3 +5,7 @@ $primary-color: color("purple", "lighten-2") !default;
 .brand-logo{
   height: 100%;
 }
+
+img.brand-logo{
+	width: inherit;
+}

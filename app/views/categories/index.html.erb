@@ -1,5 +1,5 @@
 <div class="header">
-  <div class="container">
+  <div class="navbar-fixed">
     <%= render :partial => 'layouts/html_header' %>
   </div>
 </div>
@@ -21,25 +21,31 @@
       </div>
     </div>
     <div class="row">
-      <a href=<%= 'games#index' %>> Show all games </a>
       <% @categories.each do |t| %>
-      <div class="col s12 m3">
+      <div class="col s12 m4 l3">
         <div class="card">
           <div class="card-image"> 
             <%= image_tag t.image %>
           </div>
-          <div class="card-title">
-            <h2><%= t.name %></h2>
-          </div>
           <div class="card-content">
-            <p><%= t.bio %></p>
+            <p><%= t.name %></p>
           </div>
+          <!--div class="card-content">
+            <p><%= t.bio %></p>
+          </div-->
           <div class="card-action">
-            <%= link_to "Other soundtracks like this one", category_path(t) %>
+            <%= link_to "More like this", category_path(t) %>
           </div>
         </div>
       </div>
       <% end %>
+      <div class="col s12 m4 l3">
+	      <div class = "card">
+	      	<div class="card-action">
+	      		<a href=<%= 'games#index' %>> Show all games </a>
+	      	</div>
+	   		</div> 	
+      </div>
     </div>
   </div>
 </div>
