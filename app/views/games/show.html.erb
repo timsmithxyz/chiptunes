@@ -1,18 +1,31 @@
+<head>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <div class="header">
-  <div class="container">
+  <div class="navbar-fixed">
     <%= render :partial => 'layouts/html_header' %>
   </div>
 </div>
 
 <div class="game">
   <div class="container">
-    <h2><%= @game.name %></h2>
+    <div class="center-align">
+      <h3><%= @game.name %></h3>
+    </div>
 
-    <div class="cards row">
+    <div class="row">
       <% @songs.each do |s| %>
-      <div class="card col-xs-4">
-        <h2><%= s.name %></h2>
-        <%= link_to "Listen", song_path(s) %>
+      <div class="col s12 m4 l3">
+        <div class="card">
+          <div class="card-content">
+            <p><%= s.name %></p>
+          </div>
+          <div class="card-action">
+            <%= link_to "Listen", song_path(s) %>
+          </div>
+        </div>
       </div>
       <% end %>
     </div>

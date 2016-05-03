@@ -9,3 +9,12 @@ $primary-color: color("purple", "lighten-2") !default;
 img.brand-logo{
 	width: inherit;
 }
+
+.btn.waves-effect.waves-light{
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.btn.waves-effect.waves-light.games{
+  margin-top: 15px;
+}

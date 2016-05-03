@@ -1,3 +1,8 @@
+<head>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <div class="header">
   <div class="navbar-fixed">
     <%= render :partial => 'layouts/html_header' %>
@@ -7,18 +12,30 @@
 <div class="categories">
   <div class="container">
     <div class="row">
-      <div class="col s12">
-        <div class="row">
+      <div class="col s8 m9">
+        <!--div class="row"-->
           <%= form_tag(categories_path, :method => "get", id: "search-form") do %>
-            <label for="search-form">Games similar to...</label>  
+            <label for="search">Games similar to...</label>
+
             <%= text_field_tag :search, params[:search] %>
-            <%= submit_tag "Search" %>
+
+      </div>
+      <div class="col s4 m3">
+      	<div class="row center-align">
+            <!--%= submit_tag "Search" %-->
+            <button class="btn waves-effect waves-light" type="submit" name="action">
+            	<strong class="hide-on-small-and-down">Submit</strong>
+              <i class="material-icons right">send</i>
+            </button>
           <% end %>
+        </div	>
+      </div>
+      <div class="col s12">    
           <% if !@categories.present? %>
             <p>There are no categories containing the term(s) <%= params[:search] %>.</p>  
           <% end %>
-        </div>
       </div>
+        <!--/div-->
     </div>
     <div class="row">
       <% @categories.each do |t| %>

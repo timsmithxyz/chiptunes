@@ -1,27 +1,54 @@
+<head>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <div class="header">
-  <div class="container">
+  <div class="navbar-fixed">
     <%= render :partial => 'layouts/html_header' %>
   </div>
 </div>
 
 <div class="games">
   <div class="container">
-    <%= form_tag(games_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
-      <%= submit_tag "Search" %>
-    <% end %>
-    <% if !@games.present? %>
-      <p>There are no games containing the term(s) <%= params[:search] %>.</p>  
-    <% end %>
-    <div class="cards row">
-    	<% @games.each do |t| %>
-      <div class="card col-xs-4">
-        <%= image_tag t.image %>
-        <h2><%= t.name %></h2>
-        <p><%= t.bio %></p>
-        <%= link_to "Songs from this game", game_path(t) %>
+    <div class="row">
+      <div class="col s8 m9">
+        <%= form_tag(games_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
+          <!--label for="search">Search games</label-->
+          <!--%= submit_tag "Search" %-->
+        <% end %>
+        <% if !@games.present? %>
+          <p>There are no games containing the term(s) <%= params[:search] %>.</p>  
+        <% end %>
       </div>
-      <% end %>
+      <div class="col s4 m3">
+        <div class="row center-align">
+            <!--%= submit_tag "Search" %-->
+            <button class="btn waves-effect waves-light games" type="submit" name="action">
+              <strong class="hide-on-small-and-down">Submit</strong>
+              <i class="material-icons right">send</i>
+             </button>
+          <!--% end %-->
+        </div >
+      </div>
+      <div class="row">
+      	<% @games.each do |t| %>
+        <div class="col s12 m4 l3">
+          <div class="card medium">
+            <div class="card-image">
+              <%= image_tag t.image %>
+            </div>
+            <div class="card-content">
+              <p><%= t.name %></p>
+            </div>
+            <div class="card-action">
+              <%= link_to "Songs from this game", game_path(t) %>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
