@@ -11,17 +11,25 @@
 <body>
     <div class="wrapper">
 
-        <header>
+        <div class="navbar-fixed">
             <%= render :partial => 'layouts/html_header' %>
-        </header>
+        </div>
 
-        <div class="body">
-            <section class="title">
-
-                <h1>About</h1>
-                <p><i>Chip.tunes</i> is a website by game music fans, for game music fans. We hand-pick games with great music for you to listen to, based on popular games that you've probably already played and listened to. We try our best to update weekly, on Tuesdays.</p>
-
-            </section>
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <div class="card medium">
+                <div class="card-title">
+                  <div class="center-align">
+                    <h1 class="about">About</h1>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p><i>Chip.tunes</i> is a website by game music fans, for game music fans. We hand-pick games with great music for you to listen to, based on popular games that you've probably already played and listened to. We try our best to update weekly, on Tuesdays.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
 </body>

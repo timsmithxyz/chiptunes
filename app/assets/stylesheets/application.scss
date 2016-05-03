@@ -1,5 +1,5 @@
 @import "materialize/components/color";
-$primary-color: color("purple", "lighten-2") !default;
+$primary-color: color("purple", "darken-2") !default;
 @import "materialize";
 
 .brand-logo{
@@ -17,4 +17,16 @@ img.brand-logo{
 
 .btn.waves-effect.waves-light.games{
   margin-top: 15px;
+}
+
+body{
+	background: white;
+}
+
+.container{
+	background: white;
+}
+
+.about, .contact{
+	color: black;
 }

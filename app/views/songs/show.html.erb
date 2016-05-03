@@ -1,5 +1,5 @@
 <div class="header">
-  <div class="container">
+  <div class="navba-fixed">
     <%= render :partial => 'layouts/html_header' %>
   </div>
 </div>
@@ -7,13 +7,15 @@
 <div class="song">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <%= image_tag @song.game.image %>
-        <h2><%= @song.name %></h2>
-        <audio controls autoplay>
-          <source src= <%= @song.audio %> type="audio/mp3">
-        </audio>
-        <p>from <%= @song.game.name %></p>
+      <div class="col s12">
+        <div class="card large">
+          <%= image_tag @song.game.image %>
+          <h2><%= @song.name %></h2>
+          <audio controls autoplay>
+            <source src= <%= @song.audio %> type="audio/mp3">
+          </audio>
+          <p>from <%= @song.game.name %></p>
+        </div>
       </div>
     </div>
   </div>
