@@ -11,7 +11,7 @@
 
 <div class="categories">
   <div class="container">
-    <div class="color-block">
+    <div class="nav-wrapper">
       <div class="center-align">
         <h2>Discover</h2>
       </div>
@@ -19,9 +19,8 @@
         <div class="col s8 m9">
           <!--div class="row"-->
             <%= form_tag(categories_path, :method => "get", id: "search-form") do %>
-              <label for="search">Games similar to...</label>
 
-              <%= text_field_tag :search, params[:search] %>
+              <%= text_field_tag :search, params[:search], placeholder: "Music similar to..." %>
 
         </div>
         <div class="col s4 m3">

@@ -11,12 +11,8 @@ img.brand-logo{
 }
 
 .btn.waves-effect.waves-light{
-  margin-top: 25px;
-  margin-bottom: 0px;
-}
-
-.btn.waves-effect.waves-light.games{
   margin-top: 15px;
+  margin-bottom: 0px;
 }
 
 body{
@@ -37,4 +33,23 @@ body{
 
 audio {
 	width: 100%;
+}
+
+.card-title {
+	color: white;
+   	text-shadow:
+       1px 1px 0 #000;
+}
+
+h2 {
+	color: $primary-color;
+}
+
+.stripe {
+	color: white;
+	background: color("purple", "lighten-1");
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
