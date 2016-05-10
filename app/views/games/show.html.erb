@@ -26,9 +26,6 @@
             </div>
           </div>
         </div>
-        <!--div class="col s12 m9">
-          
-        </div-->
       </div>
     </div>
 
@@ -39,9 +36,9 @@
           <div class="card-content">
             <p><%= s.name %></p>
           </div>
-          <div class="card-action">
-            <%= link_to "Listen", song_path(s) %>
-          </div>
+          <!--div class="card-action"-->
+            <%= link_to "Listen", song_path(s), { :class=>"card-action waves-effect waves-purple", :style=>"width: 100%;" } %>
+          <!--/div-->
         </div>
       </div>
       <% end %>

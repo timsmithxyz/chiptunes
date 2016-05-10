@@ -33,15 +33,15 @@
       <% @games.each do |g| %>
       <div class="col s12 m4 l3">
         <div class="card medium">
-          <div class="card-image">
-            <%= image_tag g.image %>
+          <div class="card-image waves-effect waves-block waves-light">
+            <%= link_to image_tag(g.image), game_path(g) %>
           </div>
           <div class="card-content">
             <p><%= g.name %></p>
           </div>
-          <div class="card-action">
-            <%= link_to "Tracks", game_path(g) %>
-          </div>
+          <!--div class="card-action"-->
+            <%= link_to "Tracks", game_path(g), { :class=>"card-action waves-effect waves-purple", :style=>"width: 100%;"} %>
+          <!--/div-->
         </div>
       </div>
       <% end %>

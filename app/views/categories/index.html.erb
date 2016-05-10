@@ -25,7 +25,6 @@
         </div>
         <div class="col s4 m3">
         	<div class="row center-align">
-              <!--%= submit_tag "Search" %-->
               <button class="btn waves-effect waves-light" type="submit" name="action">
               	<strong class="hide-on-small-and-down">Submit</strong>
                 <i class="material-icons right">send</i>
@@ -44,27 +43,22 @@
     <div class="row">
       <% @categories.each do |t| %>
       <div class="col s12 m4 l3">
-        <div class="card">
-          <div class="card-image"> 
-            <%= image_tag t.image %>
+        <div class="card" >
+          <div class="card-image waves-effect waves-block waves-light"> 
+            <%= link_to image_tag(t.image), category_path(t) %>
           </div>
           <div class="card-content">
             <p><%= t.name %></p>
           </div>
-          <!--div class="card-content">
-            <p><%= t.bio %></p>
-          </div-->
-          <div class="card-action">
-            <%= link_to "More like this", category_path(t) %>
-          </div>
+          <!--div class="card-action"-->
+            <%= link_to "More like this", category_path(t), { :class=>"card-action waves-effect waves-purple", :style=>"width: 100%;"} %>
+          <!--/div-->
         </div>
       </div>
       <% end %>
       <div class="col s12 m4 l3">
 	      <div class = "card">
-	      	<div class="card-action">
-	      		<a href=<%= 'games#index' %>> Show all games </a>
-	      	</div>
+	      	<%= link_to 'Show all games', 'games#index', { :class=>"card-action waves-effect waves-purple", :style=>"width: 100%;" } %>
 	   		</div> 	
       </div>
     </div>
