@@ -4,33 +4,31 @@
 </head>
 
 <div class="header">
-  <div class="navbar-fixed">
+  <div class="navbar-fixed z-depth-0">
     <%= render :partial => 'layouts/html_header' %>
   </div>
 </div>
 
 <div class="categories">
-  <div class="container">
-    <div class="nav-wrapper">
+    <div class="color-block z-depth-1">
       <div class="center-align">
         <h2>Discover</h2>
       </div>
-      <div class="row">
+      <div class="container row">
         <div class="col s8 m9">
-          <!--div class="row"-->
             <%= form_tag(categories_path, :method => "get", id: "search-form") do %>
 
               <%= text_field_tag :search, params[:search], placeholder: "Music similar to..." %>
 
         </div>
         <div class="col s4 m3">
-        	<div class="row center-align">
+          <div class="row center-align">
               <button class="btn waves-effect waves-light" type="submit" name="action">
-              	<strong class="hide-on-small-and-down">Submit</strong>
+                <strong class="hide-on-small-and-down">Submit</strong>
                 <i class="material-icons right">send</i>
               </button>
             <% end %>
-          </div	>
+          </div >
         </div>
       </div>
       <div class="col s12">    
@@ -38,8 +36,10 @@
             <p>There are no categories containing the term(s) <%= params[:search] %>.</p>  
           <% end %>
       </div>
-        <!--/div-->
     </div>
+
+  <div class="container">
+
     <div class="row">
       <% @categories.each do |t| %>
       <div class="col s12 m4 l3">

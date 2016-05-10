@@ -41,9 +41,9 @@ audio {
        1px 1px 0 #000;
 }
 
-h2 {
+/*h2 {
 	color: $primary-color;
-}
+}*/
 
 .stripe {
 	color: white;
@@ -52,4 +52,14 @@ h2 {
 	margin-bottom: 0px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+
+.color-block, .container.row {
+	color: white;
+	background: color("purple", "lighten-1");
+}
+
+.color-block h2 {
+	margin-top: 0px;
+	padding-top: 25px;
 }
